@@ -1,0 +1,14 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+        "outDir": "../out-tsc/app",
+        // "module": "es2015"
+    },
+    "exclude": [
+        "test.ts",
+        "**/*.spec.ts",
+        "@fuse/services/copier.service.ts",
+        "environments/environment.hmr.ts",
+        "environments/environment.prod.ts"
+    ]
+}

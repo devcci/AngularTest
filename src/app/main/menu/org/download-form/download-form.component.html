@@ -1,0 +1,152 @@
+<div class="download-form-layout">
+    <div class="dialog-content-wrapper">
+        <mat-toolbar class="mat-warn m-0">
+            <mat-toolbar-row fxFlex fxLayout="row" fxLayoutAlign="space-between center">
+                <!-- <span clas="title dialog-title">{{'CONTENT.MENU.COMMON.CSV_DOWNLOAD' | translate}}</span> -->
+                <span clas="title dialog-title">Download</span>
+                <button mat-icon-button (click)="onCloseClick()" aria-label="Close dialog">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-toolbar-row>
+        </mat-toolbar>
+        <!-- <mat-toolbar class="m-0">
+            <mat-toolbar-row class="dialog-header" fxFlex fxLayout="row" fxLayoutAlign="center center">
+                <span class="title dialog-title">{{'CONTENT.MENU.COMMON.CSV_DOWNLOAD' | translate}}</span>
+            </mat-toolbar-row>
+        </mat-toolbar> -->
+
+        <div mat-dialog-content class="dialog-padding-content">
+            <div class="mt-20" fxLayout="row wrap" fxLayoutAlign="start center" fxLayout.fxLayout.lt-lg="column wrap"
+                fxLayoutAlign.lt-lg="center center">
+                <!-- {{'CONTENT.MENU.COMMON.DOWNLOAD_INFO' | translate}} <br>
+                {{'CONTENT.MENU.COMMON.DOWNLOAD_INFO_2' | translate}} -->
+            </div>
+            <table class="mt-20" fxLayout="row wrap" fxLayoutAlign="center center" fxLayout.fxLayout.lt-lg="column wrap"
+                fxLayoutAlign.lt-lg="center center">
+                <tbody fxFlex="100">
+                    <tr fxFlex="100">
+                        <td fxFlex="25">
+                            <mat-checkbox [(ngModel)]="checkList[1]">
+                                {{'CONTENT.MENU.IOTMANAGER.IOTMANAGER_DEVICE_LIST.CUSTOMER_CD' | translate}}
+                            </mat-checkbox>
+                        </td>
+                        <td fxFlex="25">
+                            <mat-checkbox [(ngModel)]="checkList[2]">
+                                {{'CONTENT.MENU.IOTMANAGER.IOTMANAGER_DEVICE_LIST.CUSTOMER_NAME' | translate}}
+                            </mat-checkbox>
+                        </td>
+                        <td fxFlex="25">
+                            <mat-checkbox [(ngModel)]="checkList[3]">
+                                {{'CONTENT.MENU.IOTMANAGER.IOTMANAGER_DEVICE_LIST.CUSTOMER_GROUP_CD' | translate}}
+                            </mat-checkbox>
+                        </td>
+                        <td fxFlex="25">
+                            <mat-checkbox [(ngModel)]="checkList[4]">
+                                {{'CONTENT.MENU.IOTMANAGER.IOTMANAGER_DEVICE_LIST.CUSTOMER_GROUP_NAME' | translate}}
+                            </mat-checkbox>
+                        </td>
+                    </tr>
+                <tbody fxFlex="100">
+                    <!-- <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayout.fxLayout.lt-lg="column wrap"
+                        fxLayoutAlign.lt-lg="start center"> -->
+                    <tr fxFlex="100">
+                        <td fxFlex="25">
+                            <mat-checkbox [(ngModel)]="checkList[5]">
+                                {{'CONTENT.MENU.IOTMANAGER.IOTMANAGER_DEVICE_LIST.CONTRACT_CD' | translate}}
+                            </mat-checkbox>
+                        </td>
+                        <td fxFlex="25">
+                            <mat-checkbox [(ngModel)]="checkList[6]">
+                                {{'CONTENT.MENU.IOTMANAGER.IOTMANAGER_DEVICE_LIST.CONTRACT_ITEM_NAME' | translate}}
+                            </mat-checkbox>
+                        </td>
+                        <td fxFlex="25">
+                            <mat-checkbox [(ngModel)]="checkList[7]">
+                                {{'CONTENT.MENU.IOTMANAGER.IOTMANAGER_DEVICE_LIST.SERIAL_NUM' | translate}}
+                            </mat-checkbox>
+                        </td>
+                        <td fxFlex="25">
+                            <mat-checkbox [(ngModel)]="checkList[8]">
+                                {{'CONTENT.MENU.IOTMANAGER.IOTMANAGER_DEVICE_LIST.TERMINAL_MODEL_NUMBER' | translate}}
+                            </mat-checkbox>
+                        </td>
+                    </tr>
+                    <!-- </div> -->
+                </tbody>
+                <tbody fxFlex="100">
+                    <tr fxFlex="100">
+                        <td fxFlex="25">
+                            <mat-checkbox [(ngModel)]="checkList[9]">
+                                {{'CONTENT.MENU.IOTMANAGER.IOTMANAGER_DEVICE_LIST.CONTRACT_STATUS' | translate}}
+                            </mat-checkbox>
+                        </td>
+                        <td fxFlex="25">
+                            <mat-checkbox [(ngModel)]="checkList[10]">
+                                {{'CONTENT.MENU.IOTMANAGER.IOTMANAGER_DEVICE_LIST.TERMINAL_AVAILABLITY' | translate}}
+                            </mat-checkbox>
+                        </td>
+                        <td fxFlex="25">
+                            <mat-checkbox [(ngModel)]="checkList[11]">
+                                {{'CONTENT.MENU.IOTMANAGER.IOTMANAGER_DEVICE_LIST.PREFECTURES' | translate}}
+                            </mat-checkbox>
+                        </td>
+                        <td fxFlex="25">
+                            <mat-checkbox [(ngModel)]="checkList[12]">
+                                {{'CONTENT.MENU.IOTMANAGER.IOTMANAGER_DEVICE_LIST.BRANCH' | translate}}
+                            </mat-checkbox>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody fxFlex="100">
+                    <tr fxFlex="100">
+                        <td fxFlex="25">
+                            <mat-checkbox [(ngModel)]="checkList[13]">
+                                {{'CONTENT.MENU.IOTMANAGER.IOTMANAGER_DEVICE_LIST.DEVICE_UPDATE_DATE' | translate}}
+                            </mat-checkbox>
+                        </td>
+                        <td fxFlex="25">
+                            <mat-checkbox [(ngModel)]="checkList[14]">
+                                {{'CONTENT.MENU.IOTMANAGER.IOTMANAGER_DEVICE_LIST.DEVICE_STATUS' | translate}}
+                            </mat-checkbox>
+                        </td>
+                        <td fxFlex="25">
+                            <mat-checkbox [(ngModel)]="checkList[15]">
+                                {{'CONTENT.MENU.IOTMANAGER.IOTMANAGER_DEVICE_LIST.REMOTE_DATE' | translate}}
+                            </mat-checkbox>
+                        </td>
+                        <!-- <td fxFlex="25">
+                            <mat-checkbox [(ngModel)]="checkList[16]">
+                                {{'CONTENT.MENU.IOTMANAGER.IOTMANAGER_DEVICE_LIST.FIRMWARE_VERSION' | translate}}
+                            </mat-checkbox>
+                        </td> -->
+                    </tr>
+                </tbody>
+                <!-- <tbody fxFlex="100">
+                    <tr fxFlex="100">
+                        <td fxFlex="25">
+                            <mat-checkbox [(ngModel)]="checkList[0]">
+                                {{'CONTENT.MENU.COMMON.INDEX' | translate}}
+                            </mat-checkbox>
+                        </td>
+                    </tr>
+                </tbody> -->
+                <!-- <mat-checkbox class="ml-20" [(ngModel)]="checkList[3]">
+                    {{'CONTENT.MENU.INSPECTION.EMPLOYEE_NUMBER' | translate}}
+                </mat-checkbox> -->
+            </table>
+            <div fxLayout="row wrap" fxLayoutAlign="center center" class="mt-20">
+                <button *ngIf="checkData" mat-raised-button matStepperNext type="button" color="warn"
+                    (click)="csvDownload();" class="btn-orange" style="height: 36px !important;">
+                    {{'CONTENT.MENU.COMMON.SAVE' | translate}}
+                </button>
+                <button *ngIf="!checkData" mat-raised-button matStepperNext type="button" (click)="csvDownload();"
+                    [disabled]="!checkData">
+                    {{'CONTENT.MENU.COMMON.SAVE' | translate}}
+                </button>
+                <button mat-raised-button color="default" (click)="onCloseClick()" class="save-button ml-20">
+                    {{'CONTENT.MENU.COMMON.CANCEL' | translate}}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
