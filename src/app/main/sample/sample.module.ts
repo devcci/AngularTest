@@ -5,6 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { FuseSharedModule } from '@fuse/shared.module';
 
 import { SampleComponent } from './sample.component';
+import {TestService} from '../common/service/test.service';
 
 const routes = [
     {
@@ -26,7 +27,10 @@ const routes = [
     ],
     exports     : [
         SampleComponent
-    ]
+    ],
+    providers   : [
+        TestService
+        ]
 })
 
 export class SampleModule { }
